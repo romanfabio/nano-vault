@@ -18,7 +18,7 @@ func init() {
 
 	rootPath = path.Join(home, rootDir)
 
-	if err := os.Mkdir(rootPath, os.ModeDir); err != nil {
+	if err := os.Mkdir(rootPath, os.ModePerm); err != nil {
 		if !os.IsExist(err) {
 			log.Fatal("An error occurred while creating " + rootDir + " folder")
 		}
